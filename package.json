@@ -1,0 +1,22 @@
+{
+  "name": "camino-db",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./index.js && npx jsonlint export/titres.json > export/titres-format.json",
+    "watch": "onchange ./query.sql -- npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nomnom": "^1.8.1",
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "jsonlint": "^1.6.3",
+    "onchange": "^3.3.0"
+  }
+}
